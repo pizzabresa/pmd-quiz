@@ -1,6 +1,6 @@
 const descriptions = {
     docile: [
-        "Você aparenta ser ... uma pesosa dócil. Você é gentil, prestativo e faz amigos com todos!",
+        "Você aparenta ser ... uma pessoa dócil. Você é gentil, prestativo e faz amigos com todos!",
         "Você é uma pessoa maravilhosa.",
         "......",
         "Será que eu tô exagerando? Não acho. Você sabe isso melhor que eu.",
@@ -22,7 +22,7 @@ const descriptions = {
     ],
     impish: [
         "Você aparenta ser ... uma pessoa travessa. Você é brincalhão, alegre e adora pregar peças.",
-        "Você também é gentil. E é por isso que pessoas ao seu redor te acham irresístivel.",
+        "Você também é gentil. E é por isso que pessoas ao seu redor te acham irresistível.",
         "Você deve ser a pessoa mais popular do seu grupo!",
         "Ah, você não é tão popular? Ou você está sendo modesto ... ou só não notou.",
         "Aposto que as pessoas são tímidas demais pra mostrar seus sentimentos.",
@@ -30,7 +30,7 @@ const descriptions = {
         "Uma pessoa travessa como você deve ser o Pokémon ..."
     ],
     quirky: [
-        "Você aparenta ser ... uma pessoa peculiar. Pessoas te consideram um ecêntrico que faz tudo do seu jeito.",
+        "Você aparenta ser ... uma pessoa peculiar. Pessoas te consideram um excêntrico que faz tudo do seu jeito.",
         "Seu jeitão sem preocupações te faz atraente, mas também um pouco infantil ...",
         "Você é meio volúvel e causa problemas para as pessoas ao seu redor.",
         "Talvez até as pessoas estão chateadas por você ser tão pipa voada?",
@@ -89,9 +89,9 @@ const descriptions = {
         "Pessoas já disseram isso pra você?",
         "Ah? Tá me mandando ir tomar no cú?",
         "Vai você, seu filho da puta.",
-        "Ah. Desculpa. Deixei me levar. Mil perdões, de verdade.",
+        "Ah. Desculpa. Perdi o controle. Mil perdões, de verdade.",
         "De qualquer forma sua atitude é o que te define.",
-        "Te faz irritante e agradável ao mesmo tempo.",
+        "Algo que te faz irritante e agradável ao mesmo tempo.",
         "Uma pessoa atrevida como você deve ser o Pokémon ...",
     ],
     hasty: [
@@ -107,7 +107,7 @@ const descriptions = {
     ],
     calm: [
         "Você aparenta ser ... uma pessoa calma. Você é capaz de dar conselhos aos seus amigos sem problemas.",
-        "Você nãog sota de lutar.",
+        "Você não gosta de lutar.",
         "Você é uma pessoa gentil que se importa.",
         "Você tem muitos amigos que se modelam em você.",
         "Mas ... você também é um pouco ingênuo ... e relaxado ... e talvez descuidado.",

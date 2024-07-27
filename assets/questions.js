@@ -18,7 +18,7 @@ const questions = [
         ]
     },
     {
-        text: "Você á falou \"Prazer em te conhecer\" para alguém que já tinha conhecido antes?", answers: [
+        text: "Você já falou \"Prazer em te conhecer\" para alguém que já tinha conhecido antes?", answers: [
             { text: "Sim.", points: { quirky: 4, rash: 4 } },
             { text: "Não.", points: { calm: 2 } }
         ]
@@ -198,7 +198,8 @@ const questions = [
     {
         text: "Você vai comer em um restaurante chique conhecido pela comida. Que proteína escolhe?", answers: [
             { text: "Carne vermelha.", points: { impish: 4, naive: 4 } },
-            { text: "Carne branca ou proteína vegetal", points: { hardy: 2 } },
+            { text: "Carne branca.", points: { hardy: 2 } },
+            { text: "Proteína vegetal.", points: { hardy: 4 } },
             { text: "Qualquer coisa! Tudo é uma delícia!", points: { bold: 4 } }
         ]
     },
@@ -210,14 +211,14 @@ const questions = [
         ]
     },
     {
-        text: "Um amigo te oferece um jantar à conta dele. O que você faz?", answers: [
+        text: "Um amigo te convida para jantar à conta dele. O que você faz?", answers: [
             { text: "Já tô lá!", points: { bold: 4 } },
             { text: "Se não for incomodar", points: { jolly: 4 } },
             { text: "Obrigado...", points: { quirky: 4 } }
         ]
     },
     {
-        text: "Todo mundo ao seu redor está rindo mundo de algo que você acha chato. O que você faz?", answers: [
+        text: "Todo mundo ao seu redor está rindo mundo de algo que você não achou engraçado. O que você faz?", answers: [
             { text: "Nada.", points: { brave: 4, bold: 2 } },
             { text: "Rio junto.", points: { lonely: 4, timid: 2 } },
             { text: "Depende da situação.", points: { quiet: 2, quirky: 2 } }
@@ -252,7 +253,7 @@ const questions = [
         ]
     },
     {
-        text: "Te entregaram uma caixa grande como um souvenir. O que você faz?", answers: [
+        text: "Te deram uma caixa grande como um souvenir. O que você faz?", answers: [
             { text: "Você espera chegar em casa pra abrir.", points: { docile: 4 } },
             { text: "Balança ela!", points: { naive: 4 } },
             { text: "Abre logo!", points: { rash: 4 } },
@@ -337,9 +338,10 @@ const questions = [
         ]
     },
     {
-        text: "Você acha que, não importa o que acontecer, a vida continua?", answers: [
-            { text: "Claro!", points: { jolly: 2, relaxed: 4 } },
-            { text: "Nunca.", points: { quiet: 2 } }
+        text: "Você tomou um pé na bunda. Como você reage?", answers: [
+            { text: "Ai, que alívio!", points: { jolly: 2, relaxed: 4 } },
+            { text: "É triste, mas faz parte", points: { calm: 2 } },
+            { text: "\"Amiga, compra chocolate. Vou chorar no seu sofá a semana inteira.\"", points: { quiet: 2 } }
         ]
     },
     {
@@ -399,7 +401,7 @@ const questions = [
         ]
     },
     {
-        text: "Você tá em uma caminhada quando uma reporter te aborad pra uma entrevista. O que você faz?", answers: [
+        text: "Você tá em uma caminhada quando uma repórter te aborda pra uma entrevista. O que você faz?", answers: [
             { text: "Saio correndo!", points: { timid: 4 } },
             { text: "Respondo as perguntas numa boa.", points: { brave: 4, sassy: 4 } },
             { text: "Avacalho com ela. Tô na TV!", points: { bold: 2, naive: 4 } }
