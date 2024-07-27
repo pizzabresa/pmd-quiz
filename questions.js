@@ -37,21 +37,21 @@ const questions = [
         ]
     },
     {
-        text: "Já pensou que se você cavar no seu quintal você pode achar tesouro escondido?", answers: [
+        text: "Já jogou na loteria só porque \"vai quê, né?\"?", answers: [
             { text: "Sim.", points: { naive: 4 } },
             { text: "Não.", points: { quiet: 2 } }
         ]
     },
     {
-        text: "Você prefere brincar dentro ou fora de casa?", answers: [
-            { text: "Lá fora", points: { impish: 4, rash: 4 } },
-            { text: "Dentro", points: { calm: 2 } }
+        text: "Você prefere passar o fim de semana em um rolê caseiro ou na saideira?", answers: [
+            { text: "Saideira", points: { impish: 4, rash: 4 } },
+            { text: "Caseiro", points: { calm: 2 } }
         ]
     },
     {
-        text: "Você descobre um baú velho em algumas ruínas. O que você faz?", answers: [
-            { text: "Eu abro, ué!", points: { brave: 4, hasty: 4, impish: 4, rash: 2 } },
-            { text: "Chamo alguém pra me ajudar a abrir.", points: { timid: 2 } }
+        text: "Você achou dinheiro escondido atrás da privada no tribunal. O que você faz?", answers: [
+            { text: "Boto no bolso e saio de fininho.", points: { brave: 4, hasty: 4, impish: 4, rash: 2 } },
+            { text: "Finjo que nem vi.", points: { timid: 2 } }
         ]
     },
     {
@@ -61,7 +61,7 @@ const questions = [
         ]
     },
     {
-        text: "Quando você vê um botão, você sente uma vontade avassaladora de apertar ele?", answers: [
+        text: "Quando você vê um botão, você sente uma vontade enorme de apertar ele?", answers: [
             { text: "Sim.", points: { hasty: 4 } },
             { text: "Não.", points: { calm: 2 } },
         ]
@@ -122,8 +122,9 @@ const questions = [
     },
     {
         text: "Um amigo leva um tombo enorme! O que você faz?", answers: [
-            { text: "Ajudo ele a se levantar!", points: { brave: 4, lonely: 2 } },
-            { text: "Rio! Engraçado pra caralho!", points: { impish: 4, naive: 2, rash: 2 } }
+            { text: "Fico preocupado e ajudo a se levantar!", points: { brave: 4, lonely: 2 } },
+            { text: "Rio e o ajudo a se levantar.", points: { naive: 2, rash: 2 } },
+            { text: "Rio pra caralho.", point: { impish: 4 } }
         ]
     },
     {
@@ -140,16 +141,16 @@ const questions = [
         ]
     },
     {
-        text: "Tem um rumor no bairro sobre um fantasma no banheiro da escolha! O que você faz?", answers: [
-            { text: "Que medo ... banheiros!", points: { docile: 4, timid: 2 } },
-            { text: "Vou como normal.", points: { bold: 2, jolly: 4, relaxed: 2 } }
+        text: "Tem um rumor no bairro que tá tendo assalto à noite! O que você faz?", answers: [
+            { text: "Evito fazer qualquer coisa à noite.", points: { docile: 4, timid: 2 } },
+            { text: "Sigo vivendo como normal.", points: { bold: 2, jolly: 4, relaxed: 2 } }
         ]
     },
     {
-        text: "Você está em aula quando vê que tem que ir no banheiro! O que você faz?", answers: [
-            { text: "Peço permissão pra ir.", points: { brave: 4, bold: 4 } },
+        text: "Você está em uma reunião quando vê que tem que ir no banheiro! O que você faz?", answers: [
+            { text: "Falo que aconteceu um imprevisto e já volto.", points: { brave: 4, bold: 4 } },
             { text: "Saio de fininho.", points: { hasty: 2 } },
-            { text: "Me seguro até o fim da aula.", points: { timid: 2 } }
+            { text: "Tento segurar até o fim.", points: { timid: 2 } }
         ]
     },
     {
@@ -160,7 +161,7 @@ const questions = [
         ]
     },
     {
-        text: "Qual é o seu estilo de estudo?", answers: [
+        text: "Qual é o seu estilo de estudo ou trabalho?", answers: [
             { text: "Trabalho duro, todo dia", points: { hardy: 4 } },
             { text: "Se eu me lembrar...", points: { quirky: 4, hasty: 2 } },
             { text: "Eu dou uma olhada no que é necessário.", points: { quiet: 2 } },
@@ -168,10 +169,10 @@ const questions = [
         ]
     },
     {
-        text: "Você está preparando comida pra um piquenique com sua turma quando fica com fome. O que você faz?", answers: [
-            { text: "Como um pouquinho.", points: { hasty: 4 } },
-            { text: "Me seguro e termino de preparar.", points: { hardy: 4 } },
-            { text: "Que comida? Já comi.", points: { rash: 4 } }
+        text: "Você e seu amigo estão atrasados pra um compromisso. Enquando esperava ele no ponto, o ônibus chega. O que você faz?", answers: [
+            { text: "Pego o ônibus e encontro ele lá.", points: { hasty: 4 } },
+            { text: "Espero ele e a gente chega atrasado juntos.", points: { hardy: 4 } },
+            { text: "Não ia estar nem esperando ele.", points: { rash: 4 } }
         ]
     },
     {
@@ -253,7 +254,7 @@ const questions = [
         ]
     },
     {
-        text: "Te deram uma caixa grande como um souvenir. O que você faz?", answers: [
+        text: "Te deram uma caixa grande de presente. O que você faz?", answers: [
             { text: "Você espera chegar em casa pra abrir.", points: { docile: 4 } },
             { text: "Balança ela!", points: { naive: 4 } },
             { text: "Abre logo!", points: { rash: 4 } },
@@ -261,11 +262,11 @@ const questions = [
         ]
     },
     {
-        text: "Hey, o que é isso? Tem alguém atrás de você! Então ... você olhou pra trás?", answers: [
-            { text: "Não faz isso comigo! Quase me matou de susto!", points: { timid: 4 } },
-            { text: "Ok, admito que sim. Você me tapeou.", points: { docile: 4 } },
+        text: "Você tem medo de histórias de terror?", answers: [
+            { text: "Muito!", points: { timid: 4 } },
+            { text: "Só de jumpscares.", points: { docile: 4 } },
             { text: "Não.", points: { lonely: 4, sassy: 4 } },
-            { text: "Quê?", points: { relaxed: 4 } }
+            { text: "Cara, nem vejo.", points: { relaxed: 4 } }
         ]
     },
     {
@@ -298,7 +299,7 @@ const questions = [
     },
     {
         text: "Você tá em uma reunião quieta quando escuta alguém peidar. Como você reage?", answers: [
-            { text: "Morro de rir!", points: { jolly: 4, naive: 4 } },
+            { text: "Rio um pouco!", points: { jolly: 4, naive: 4 } },
             { text: "Deixo quieto...", points: { docile: 2, impish: 2 } },
             { text: "Quem fez isso?", points: { brave: 4 } }
         ]
@@ -341,7 +342,7 @@ const questions = [
         text: "Você tomou um pé na bunda. Como você reage?", answers: [
             { text: "Ai, que alívio!", points: { jolly: 2, relaxed: 4 } },
             { text: "É triste, mas faz parte", points: { calm: 2 } },
-            { text: "Choro e tristeza", points: { quiet: 2 } }
+            { text: "Só choro e tristeza", points: { quiet: 2 } }
         ]
     },
     {
