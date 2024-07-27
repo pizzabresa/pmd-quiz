@@ -17,6 +17,7 @@ class Controller {
             }
             indices.push(hashed);
         }
+        indices.push(64);
 
         this.questions = indices.map(idx => questions[idx]);
 
@@ -87,6 +88,8 @@ class Controller {
             }
         }
 
+        let gen = this.points.classic ? 123 : this.points.modern ? 456 : 789;
+
         const header = document.getElementById('card-header');
         header.textContent = titles[key];
         header.style.textAlign = 'center';
@@ -104,7 +107,7 @@ class Controller {
         }
 
         const img = document.createElement('img');
-        img.src = `https://img.pokemondb.net/artwork/avif/${starters[key].toLowerCase()}.avif`;
+        img.src = `https://img.pokemondb.net/artwork/avif/${starters[key][gen].toLowerCase()}.avif`;
         img.alt = starters[key];
         img.style = "width: 200px; margin: 0 auto; display: block;";
         container.appendChild(img);
@@ -112,7 +115,7 @@ class Controller {
         const p = document.createElement('p');
         p.style.textAlign = "center";
         p.style.paddingTop = "10px";
-        p.innerHTML = `<strong>${starters[key]}</strong>`;
+        p.innerHTML = `<strong>${starters[key][gen]}</strong>`;
         container.appendChild(p);
 
         Controller.setBumpers();

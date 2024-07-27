@@ -31,7 +31,7 @@ const questions = [
         ]
     },
     {
-        text: "Já olhou pra sua reflexão e pensou \"Que delícia\"?", answers: [
+        text: "Já olhou pra seu reflexo e pensou \"Que delícia\"?", answers: [
             { text: "Óbvio!", points: { jolly: 2, naive: 2, sassy: 4 } },
             { text: "Bem, não ...", points: { hardy: 2 } }
         ]
@@ -427,6 +427,13 @@ const questions = [
             { text: "Fico puto!", points: { hasty: 4 } },
             { text: "Fico triste.", points: { lonely: 4 } },
             { text: "Aeee! Briga de água!", points: { impish: 4, jolly: 4, naive: 4 } }
+        ]
+    },
+    {
+        text: "Qual era de Pokémon você mais gosta, reconhece e gostaria de jogar?", answers: [
+            { text: "Pokémon Clássico (Kanto, Johto e Hoenn)", points: { classic: -2 } },
+            { text: "Pokémon Moderno (Sinnoh, Unova e Kalos)", points: { modern: -2 } },
+            { text: "Pokémon Contemporâneo (Alola, Galar e Paldea)", points: { contemp: -2 } }
         ]
     }
 ];
