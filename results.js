@@ -116,18 +116,33 @@ const descriptions = {
     ]
 }
 
+const titles = {
+    docile: "Dócil",
+    hardy: "Resiliente",
+    jolly: "Feliz",
+    impish: "Travessa",
+    quirky: "Peculiar",
+    relaxed: "Tranquila",
+    brave: "Valente",
+    lonely: "Solitária",
+    timid: "Tímida",
+    naive: "Ingênua",
+    sassy: "Atrevida",
+    hasty: "Apressada"
+};
+
 const starters = {
-    docile: { mon: "Happiny", pt: "dócil" },
-    hardy: { mon: "Aron", pt: "resiliente" },
-    jolly: { mon: "Woobat", pt: "feliz" },
-    impish: { mon: "Sprigatito", pt: "travesso" },
-    quirky: { mon: "Trubbish", pt: "peculiar" },
-    relaxed: { mon: "Slowpoke", pt: "tranquila" },
-    brave: { mon: "Scraggy", pt: "valente" },
-    lonely: { mon: "Cubone", pt: "solitária" },
-    timid: { mon: "Snom", pt: "tímida" },
-    naive: { mon: "Pichu", pt: "ingênua" },
-    sassy: { mon: "Litten", pt: "atrevida" },
-    hasty: { mon: "Growlithe", pt: "apressada" },
-    calm: { mon: "Munchlax", pt: "calma" }
+    docile: "Happiny",
+    hardy: "Aron",
+    jolly: "Woobat",
+    impish: "Sprigatito",
+    quirky: "Trubbish",
+    relaxed: "Slowpoke",
+    brave: "Scraggy",
+    lonely: "Cubone",
+    timid: "Snom",
+    naive: "Pichu",
+    sassy: "Litten",
+    hasty: "Growlithe",
+    calm: "Munchlax"
 };

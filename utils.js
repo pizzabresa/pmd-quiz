@@ -1,0 +1,163 @@
+const states = {
+    TITLE: 0,
+    QUESTION: 1
+};
+
+class Controller {
+    constructor() {
+        this.state = states.TITLE;
+        this.questions = [];
+        this.spreads = [];
+        this.points = {};
+
+        // Arrow function needed due to this shenanigans
+        document.getElementById('go-button').onclick = () => controller.startQuiz();
+    }
+
+    startQuiz() {
+        const name = document.getElementById('name');
+        if (name.value.length == 0) {
+            name.style.border = "1px solid red";
+            name.placeholder = "Por favor preencha seu nome."
+            return;
+        }
+
+        const preprocessed = name.value.toLowerCase().replace(/[^a-zãõéíúóêôç]/i, "");
+        let hashed = 0
+        for (const index in preprocessed) {
+            const ch = preprocessed.charCodeAt(index);
+            hashed += (ch * (index + 1)) & 63;
+        }
+
+        let indices = [];
+        for (let i = 0; i < 8; ++i) {
+            hashed = (7 * hashed + 11) & 63;
+            while (indices.includes(hashed)) {
+                hashed = (hashed + 1) & 63;
+            }
+            indices.push(hashed);
+        }
+
+        this.questions = indices.map(idx => questions[idx]);
+        document.getElementById('name').remove();
+
+        const button = document.getElementById('go-button');
+        const clone = button.cloneNode(true);
+        clone.textContent = "Responder";
+        // Arrow function needed due to this shenanigans
+        clone.onclick = () => this.checkAnswer();
+
+        button.remove();
+        document.getElementById('card-button-container').appendChild(clone);
+
+        this.askQuestion();
+    }
+
+    askQuestion() {
+        if (this.questions.length == 0) {
+            this.presentResults();
+            return;
+        }
+
+        const question = this.questions.shift();
+        const answers = question.answers;
+
+        let header = document.getElementById('card-header');
+        header.style.textAlign = 'left';
+        header.textContent = question.text;
+
+        const content = document.getElementById('card-content');
+        this.spreads = [];
+        let html = `<ul class="list-group" style="padding-bottom: 20px">`;
+        for (let i = 0; i < answers.length; ++i) {
+            const isChecked = i == 0 ? "checked" : "";
+            html += `<li class="list-group-item form-check form-check-inline">` +
+                `<input class="form-check-input radio-inline" type="radio" name="question" id="a${i}" ${isChecked}>` +
+                `<label class="form-check-label radio-inline" for="a${i}">${answers[i].text}</label>` +
+                `</li>`;
+
+            this.spreads.push(answers[i].points);
+        }
+        html += "</ ul>";
+
+        content.innerHTML = html;
+        Controller.setBumpers();
+    }
+
+    checkAnswer() {
+        for (let i = 0; i < this.spreads.length; ++i) {
+            const radio = document.getElementById('a' + i);
+            if (radio.checked) {
+                for (let key in this.spreads[i]) {
+                    this.points[key] = (this.points[key] || 0) + this.spreads[i][key];
+                }
+                break;
+            }
+        }
+
+        this.askQuestion();
+    }
+
+    presentResults() {
+        let biggest = -1;
+        let key = "naive";
+        for (let k in this.points) {
+            if (this.points[k] >= biggest) {
+                biggest = this.points[k];
+                key = k;
+            }
+        }
+
+        const header = document.getElementById('card-header');
+        header.textContent = titles[key];
+        header.style.textAlign = 'center';
+
+        const bottomContainer = document.getElementById('card-button-container');
+        bottomContainer.remove();
+
+        const container = document.getElementById('card-content');
+        [...container.childNodes].forEach(node => node.remove());
+
+        for (let line in descriptions[key]) {
+            const p = document.createElement('p');
+            p.textContent = descriptions[key][line];
+            container.appendChild(p);
+        }
+
+        const img = document.createElement('img');
+        img.src = `https://img.pokemondb.net/artwork/avif/${starters[key].toLowerCase()}.avif`;
+        img.alt = starters[key];
+        img.style = "width: 200px; margin: 0 auto; display: block;";
+        container.appendChild(img);
+
+        const p = document.createElement('p');
+        p.style.textAlign = "center";
+        p.style.paddingTop = "10px";
+        p.innerHTML = `<strong>${starters[key]}</strong>`;
+        container.appendChild(p);
+
+        Controller.setBumpers();
+    }
+
+    static setBumpers() {
+        const content = document.getElementById('card');
+
+        const topBumper = document.getElementById('top-bumper');
+        const bottomBumper = document.getElementById('bottom-bumper');
+
+        const containerHeight = window.innerHeight;
+        const contentHeight = content.getBoundingClientRect().height;
+
+        const bumperSize = (containerHeight - contentHeight) / 2;
+
+        topBumper.style.height = bumperSize + 'px';
+        bottomBumper.style.height = bumperSize + 'px';
+    }
+}
+
+const controller = new Controller();
+
+// Generic listeners
+window.addEventListener('resize', Controller.setBumpers);
+
+Controller.setBumpers();
