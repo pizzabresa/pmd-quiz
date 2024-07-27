@@ -1,11 +1,5 @@
-const states = {
-    TITLE: 0,
-    QUESTION: 1
-};
-
 class Controller {
     constructor() {
-        this.state = states.TITLE;
         this.questions = [];
         this.spreads = [];
         this.points = {};
@@ -15,31 +9,16 @@ class Controller {
     }
 
     startQuiz() {
-        const name = document.getElementById('name');
-        if (name.value.length == 0) {
-            name.style.border = "1px solid red";
-            name.placeholder = "Por favor preencha seu nome."
-            return;
-        }
-
-        const preprocessed = name.value.toLowerCase().replace(/[^a-zãõéíúóêôç]/i, "");
-        let hashed = 0
-        for (const index in preprocessed) {
-            const ch = preprocessed.charCodeAt(index);
-            hashed += (ch * (index + 1)) & 63;
-        }
-
         let indices = [];
         for (let i = 0; i < 8; ++i) {
-            hashed = (7 * hashed + 11) & 63;
+            let hashed = (Math.random() * 64) | 0;
             while (indices.includes(hashed)) {
-                hashed = (hashed + 1) & 63;
+                hashed = (Math.random() * 64) | 0;
             }
             indices.push(hashed);
         }
 
         this.questions = indices.map(idx => questions[idx]);
-        document.getElementById('name').remove();
 
         const button = document.getElementById('go-button');
         const clone = button.cloneNode(true);
