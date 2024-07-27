@@ -341,7 +341,7 @@ const questions = [
         text: "Você tomou um pé na bunda. Como você reage?", answers: [
             { text: "Ai, que alívio!", points: { jolly: 2, relaxed: 4 } },
             { text: "É triste, mas faz parte", points: { calm: 2 } },
-            { text: "\"Amiga, compra chocolate. Vou chorar no seu sofá a semana inteira.\"", points: { quiet: 2 } }
+            { text: "Choro e tristeza", points: { quiet: 2 } }
         ]
     },
     {

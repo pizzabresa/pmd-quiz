@@ -113,6 +113,31 @@ const descriptions = {
         "Mas ... você também é um pouco ingênuo ... e relaxado ... e talvez descuidado.",
         "Você talvez queira ter essas coisas em mente.",
         "Uma pessoa calma como você deve ser o Pokémon ..."
+    ],
+    rash: [
+        "Você aparenta ser ... uma pessoa precipitada, só um pouco precipitada demais às vezes!",
+        "Você sai correndo de casa e esquece de trancar as portas ou esquece guarda-chuvas em lugares.",
+        "Ah? Isso é mais precipitado que você é de verdade? Desculpas!",
+        "Mas seus amigos acham esses errinhos engraçados! Então um tipo precipitado como deve ser ...",
+        "Ah, mais uma coisa. Ocasionalmente você provavelmente revela os segredos dos seus amigos por acidente, não é?",
+        "Desculpa, tinha que ser dito.",
+        "Sem mais delongas ... uma pessoa precipitada como você deve ser o Pokémon ..."
+    ],
+    quiet: [
+        "Você aparenta ser ... uma pessoa quieta. E muito calma.",
+        "Você se dá bem com números e analiza informação antes de fazer decisões.",
+        "Raramente comete erros, porque faz suas decisões muito calma e racionalmente.",
+        "Mas também acha difícil chutar o que os outros estão pensando, e talvez els te achem um pouco frio às vezes.",
+        "Talvez você prefira revelar um pouco os seus sentimentos às vezes.",
+        "Uma pessoa quieta como você deve ser o Pokémon ..."
+    ],
+    bold: [
+        "Você aparenta ser ... uma pessoa ousada.",
+        "Muito valente e nunca desiste de nada! E você também é um pouco abrasivo de um jeitos que muitos não são.",
+        "Você não sente muita timidez e não tem problema em fazer muitas coisas que outras pessoas pensariam duas vezes antes de fazer.",
+        "Talvez você nem note quando outras pessoas então chateadas com você!",
+        "Você tem o potencial de virar uma pessoa maravilhosa ... porque você vai ser a última de pé!",
+        "Uma pessoa ousada como você deve ser o Pokémon ..."
     ]
 }
 
@@ -128,7 +153,10 @@ const titles = {
     timid: "Tímida",
     naive: "Ingênua",
     sassy: "Atrevida",
-    hasty: "Apressada"
+    hasty: "Apressada",
+    rash: "Precipitada",
+    quiet: "Quieta",
+    bold: "Ousada"
 };
 
 const starters = {
@@ -144,5 +172,8 @@ const starters = {
     naive: "Pichu",
     sassy: "Litten",
     hasty: "Growlithe",
-    calm: "Munchlax"
+    calm: "Togepi",
+    rash: "Bagon",
+    quiet: "Yamask",
+    bold: "Whismur"
 };
