@@ -88,7 +88,15 @@ class Controller {
             }
         }
 
-        let gen = this.points.classic ? 123 : this.points.modern ? 456 : 789;
+
+        let gen = null;
+        if (this.points.any) {
+            let index = (Math.random() * 3) | 0;
+            gen = [123, 456, 789][index];
+        }
+        else {
+            gen = this.points.classic ? 123 : this.points.modern ? 456 : 789;
+        }
 
         const header = document.getElementById('card-header');
         header.textContent = titles[key];

@@ -433,7 +433,8 @@ const questions = [
         text: "Qual era de Pokémon você mais gosta, reconhece e gostaria de jogar?", answers: [
             { text: "Pokémon Clássico (Kanto, Johto e Hoenn)", points: { classic: -2 } },
             { text: "Pokémon Moderno (Sinnoh, Unova e Kalos)", points: { modern: -2 } },
-            { text: "Pokémon Contemporâneo (Alola, Galar e Paldea)", points: { contemp: -2 } }
+            { text: "Pokémon Contemporâneo (Alola, Galar e Paldea)", points: { contemp: -2 } },
+            { text: "Qualquer era", points: { any: -2 } }
         ]
     }
 ];
