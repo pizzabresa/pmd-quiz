@@ -396,7 +396,7 @@ const questions = [
     {
         text: "Você quer mostrar que você gosta muito de uma certa pessoa! O que você faz?", answers: [
             { text: "Mostro um pouco jogando algo junto.", points: { jolly: 4, quiet: 2 } },
-            { text: "Deixo óbvio ao ... pregar uma peça!", points: { lonely: 4, naive: 2 } },
+            { text: "Deixo óbvio ...", points: { lonely: 4, naive: 2 } },
             { text: "Falo logo pra todo mundo!", points: { bold: 2, brave: 4, impish: 4 } },
             { text: "Não falo nada! Arriscado demais!", points: { timid: 2 } }
         ]
